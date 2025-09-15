@@ -118,4 +118,9 @@ view: pedidos {
     label: "Total vendas"
     sql: ${Vendas} ;;
   }
+  measure: custo_envio {
+    type: sum
+    label: "Custo de envio"
+    sql: ${costo_envio} ;;
+  }
 }
