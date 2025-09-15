@@ -37,7 +37,7 @@ view: pedidos {
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
   # Looker converts dates and timestamps to the specified timeframes within the dimension group.
 
-  dimension_group: fecha_envio {
+  dimension_group: Data_envio {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
     convert_tz: no
@@ -45,7 +45,7 @@ view: pedidos {
     sql: ${TABLE}.Fecha_envio ;;
   }
 
-  dimension_group: fecha_pedido {
+  dimension_group: Data_pedido {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
     convert_tz: no
@@ -93,8 +93,9 @@ view: pedidos {
     sql: ${TABLE}.Prioridad_pedido ;;
   }
 
-  dimension: ventas {
+  dimension: Vendas {
     type: number
+    hidden: yes
     sql: ${TABLE}.Ventas ;;
   }
   measure: count {
@@ -111,5 +112,10 @@ view: pedidos {
     type: sum
     label: "Quantidade"
     sql: ${cantidad} ;;
+  }
+  measure: vendas {
+    type: sum
+    label: "Total vendas"
+    sql: ${Vendas} ;;
   }
 }
