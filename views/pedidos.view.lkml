@@ -117,6 +117,7 @@ view: pedidos {
     type: sum
     label: "Total vendas"
     sql: ${Vendas} ;;
+    value_format_name: usd
   }
   measure: custo_envio {
     type: sum
