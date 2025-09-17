@@ -112,6 +112,7 @@ view: pedidos {
     type: sum
     label: "Quantidade"
     sql: ${cantidad} ;;
+    value_format_name: decimal_0
   }
   measure: vendas {
     type: sum
