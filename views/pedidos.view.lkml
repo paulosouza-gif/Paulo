@@ -123,4 +123,10 @@ view: pedidos {
     label: "Custo de envio"
     sql: ${costo_envio} ;;
   }
+
+  measure: ticket_medio_vendas {
+    label: "Ticket médio das vendas"
+    type:  number
+    sql: ${vendas} / ${quantidade} ;;
+  }
 }
