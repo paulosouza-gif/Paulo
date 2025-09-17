@@ -129,5 +129,6 @@ view: pedidos {
     label: "Ticket médio das vendas"
     type:  number
     sql: ${vendas} / ${quantidade} ;;
+    value_format_name: usd
   }
 }
