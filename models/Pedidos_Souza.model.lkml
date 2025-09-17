@@ -30,7 +30,7 @@ explore: pedidos {
 
   join: cliente {
     view_label: "Cliente"
-    sql_on: ${pedidos.id_pedido}=${cliente.id_cliente} ;;
+    sql_on: ${pedidos.id_cliente}=${cliente.id_cliente} ;;
     relationship: many_to_one
     type: left_outer
   }
